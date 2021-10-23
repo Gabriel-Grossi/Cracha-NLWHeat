@@ -1,6 +1,6 @@
 const socialMediaLinks = {
     github: "Gabriel-Grossi",
-    youtube: "rocketseat", //Código do meu canal;
+    linkedin: "in/gabriel-henrique-grossi",
     facebook: "rocketseat",
     instagram: "ghgrossi"
 }
