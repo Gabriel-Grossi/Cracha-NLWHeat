@@ -16,10 +16,28 @@ body{
     background-color: rgba(0, 0, 0, 0.85);
 }
 
+.rope{
+    display: flex;
+    margin-bottom: -1rem;
+    background: linear-gradient(45deg, rgb(15, 60, 156), rgb(9, 5, 68) , rgb(15, 60, 156), rgb(9, 5, 68));
+    width: 2rem;
+    height: 8rem;
+    z-index: 1;
+}
+
+.rope-hole{    
+    width: 13%;
+    height: .5rem;
+    background: #262626;
+    margin: .75rem auto;
+}
+
 main{
     background: url(images/background.svg);
     width: 23.4375rem;
     height: 50.75rem;
+    border-radius: 1rem;
+    filter: drop-shadow(.1rem .1rem 1.1rem rgba(0,0,255,.25));
 }
 
 .container{
@@ -39,9 +57,18 @@ main{
   .avatar span {
     position: absolute;
     top: -15px;
-    z-index: 1;
+    animation: rotation 50s infinite linear;
   }
   
+@keyframes rotation{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(365deg);
+    }
+}
+
   .avatar > img {
     width: 10rem;
     height: 11.5rem;
@@ -52,14 +79,12 @@ main{
   
   h1 {
     font-size: 1.5rem;
-  
     margin-top: 1.5rem;
   }
 
 a{
     text-decoration: none;
     color: var(--grey);
-    margin-top: .25rem;
     display: flex;
     gap: .75rem;
     justify-content: center;
@@ -77,4 +102,17 @@ ul{
     margin-top: 4rem;
     list-style: none;
     padding: 0;
+}
+
+li{
+    display: flex;
+    align-items: center;
+    background-color: #252430;
+    border-radius: .75rem;
+    filter: drop-shadow(.0125rem .35rem .25rem rgba(0,0,0,.5));
+}
+
+li:hover{
+   filter: none;
+   transform: translateY(.35rem); 
 }
